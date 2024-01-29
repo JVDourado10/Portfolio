@@ -11,12 +11,19 @@ import gulp from '../assets/gulp.svg'
 import grunt from '../assets/grunt.svg'
 import whats from '../assets/whats.svg'
 import download from '../assets/download.svg'
+import curveIn from '../assets/curve-in.svg'
+import curveOut from '../assets/curve-out.svg'
+import detailsm from '../assets/detail-sm.svg'
+// import detailbg from '../assets/detail-bg.svg'
+import curriculo from '../../curriculo.pdf'
+import linesm from '../assets/line-sm.svg'
+import linebg from '../assets/line-bg.svg'
 
 
 
 
-// import CurveIn from '../assets/curve-in.svg?react'
-// import CurveOut from '../assets/curve-out.svg?react'
+
+
 
 const Titulo = styled.h1`
   font-family: 'IBM Plex Mono';
@@ -73,72 +80,74 @@ const Descricao = styled.p`
   
 `
 
-const Perfil = styled.div`
-  margin: 40px 0;
-  display: flex;
-  justify-content: center;
+const Imagem = styled.div`
   position: relative;
+  &::after {
+    content: '';
+    height: 353px;
+    width: 266px;
+    background: url(${(props) => props.curveIn});
+    position: absolute;
+    transition: .3s;
+    top: 0;
+  }
+  &::before {
+    content: '';
+    height: 356px;
+    width: 279px;
+    background: url(${(props) => props.curveOut});
+    position: absolute;
+    transition: .3s;
+    left: -2px;
+  }
+
   &:hover {
     &::after {
       scale: 1.1;
     }
     &::before {
       scale: 1.15;
-    }
-    & div {
-      &::after {
-        top: 20%;
-        right: 20%;
-      }
-      &::before {
-        top: -5%;
-        right: -15%;
-      }
-    }
+    } 
   }
+`
 
-  & img {
-    position: relative;
-    z-index: 1;
-  } 
+const Perfil = styled.div`
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
   &::after {
     content: '';
-    height: 353px;
-    width: 266px;
-    background: url('./src/assets/curve-in.svg');
+    height: 278px;
+    width: 347px;
+    background: url(${(props) => props.linesm});
     position: absolute;
+    top: 15%;
+    right: 15%;
     transition: .3s;
+    z-index: -1;
   }
   &::before {
     content: '';
-    height: 356px;
-    width: 279px;
-    background: url('./src/assets/curve-out.svg');
+    height: 457px;
+    width: 541px;
+    background: url(${(props) => props.linebg}) no-repeat;
     position: absolute;
+    top: 0%;
+    right: -10%;
     transition: .3s;
+    z-index: -1;
   }
-  & div {
+  &:hover {
     &::after {
-      content: '';
-      height: 278px;
-      width: 347px;
-      background: url('./src/assets/line-sm.svg');
-      position: absolute;
-      top: 15%;
-      right: 15%;
-      transition: .3s;
+      top: 20%;
+      right: 20%;
     }
     &::before {
-      content: '';
-      height: 457px;
-      width: 541px;
-      background: url('./src/assets/line-bg.svg') no-repeat;
-      position: absolute;
-      top: 0%;
-      right: -10%;
-      transition: .3s;
-    }
-  }
+      top: -5%;
+      right: -15%;
+    }   
+  } 
 `
 
 const Habilidades = styled.div`
@@ -234,16 +243,16 @@ const Hero = () => {
       <Titulo>DESENVOLVEDOR <span>FRONT</span>END</Titulo>
       <Container>
         <Infos>
-          <Subtitulo>Curso</Subtitulo>
+          <Subtitulo detailsm={detailsm}>Curso</Subtitulo>
           <Descricao>Análise e Desenvolvimento de Sistemas</Descricao>
           <Descricao><span>UNICESUMAR - 1º semestre</span></Descricao>
-          <Subtitulo>Sobre</Subtitulo>
+          <Subtitulo detailsm={detailsm}>Sobre</Subtitulo>
           <Descricao><b>Desenvolvedor Front-end</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b> e <b>SASS</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
         </Infos>
-        <Perfil>
-          <div>
+        <Perfil linesm={linesm} linebg={linebg}>
+          <Imagem curveIn={curveIn} curveOut={curveOut}>
             <img className="perfil" src={perfil} alt="Perfil" />
-          </div>
+          </Imagem>
         </Perfil>
       </Container>
       <Habilidades>
@@ -288,7 +297,7 @@ const Hero = () => {
 
       </Habilidades>
       <Botoes>
-        <a className="botao1" href="./curriculo.pdf" download target="blank_">
+        <a className="botao1" href={curriculo} download target="blank_">
           <img src={download} />
           Meu Currículo</a>
         <a className="botao2" href="https://wa.me/5574998061735" target="blank_">

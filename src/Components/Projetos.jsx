@@ -3,6 +3,15 @@ import React from 'react'
 import Card from "./Card"
 import setaLeft from '../assets/arrow-left.svg'
 import setaRight from '../assets/arrow-right.svg'
+import bikcraftimg from '../assets/Bikcraft.jpg'
+import animaisFantasticosimg from '../assets/AnimaisFantasticos.jpg'
+import pokedeximg from '../assets/Pokedex.jpg'
+import disneyimg from '../assets/DisneyPlus.jpg'
+import sorteadorimg from '../assets/sorteador.jpg'
+import todoimg from '../assets/todovue.jpg'
+import worldimg from '../assets/worldgames.jpg'
+import detailbg from '../assets/detail-bg.svg'
+
 
 
 
@@ -25,7 +34,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-image: url('./src/assets/detail-bg.svg');
+    background-image: url(${(props) => props.detailbg});
     position: absolute;
     bottom: 0;
   }
@@ -87,14 +96,14 @@ const Projetos = () => {
 
   return (
     <Background id='projetos'>
-        <SectionTitle><span>PRO</span>JETOS</SectionTitle>
+        <SectionTitle detailbg={detailbg}><span>PRO</span>JETOS</SectionTitle>
       <Container>
         <SlideLeft onClick={(posicao < 0) && (() => {
           setPosicao(posicao+380)
           setAumentou(false)
         })}><img src={setaLeft}/></SlideLeft>
         <Card
-         img='./src/assets/Bikcraft.jpg' 
+         img={bikcraftimg}
          habilidades={['HTML', 'CSS', 'JavaScript']}
          site='Bikcraft'
          descricao='Meu primeiro site. Projeto de uma empresa de Bicicletas Elétricas fictícia, feito juntamente ao curso de HTML e CSS da Origamid.'
@@ -104,7 +113,7 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img='./src/assets/AnimaisFantasticos.jpg'
+         img={animaisFantasticosimg}
          habilidades={['HTML', 'CSS', 'JavaScript']}
          site='Animais Fantásticos'
          descricao='Projeto de um site informativo acerca de animais, feito juntamente ao curso de JavaScript da Origamid.'
@@ -115,18 +124,17 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img='./src/assets/Pokedex.jpg'
+         img={pokedeximg}
          habilidades={['HTML', 'CSS', 'JavaScript']}
          site='Pokedex'
          descricao='Projeto de uma Pokedex, com informações sobre os todos os pokemons fornecidos pela API. Realizado no Bootcamp FullStack Java da Santander Coders.'
          vercelLink='https://js-developer-pokedex-ivory.vercel.app/'
          githubLink='https://github.com/JVDourado10/js-developer-pokedex'
          posicao={posicao}
-
         >
         </Card>
         <Card
-         img='./src/assets/DisneyPlus.jpg'
+         img={disneyimg}
          habilidades={['HTML', 'CSS', 'JavaScript']}
          site='Clone Disney+'
          descricao='Proposta de clonar o site da Disney+ para fins práticos e de fixação de conteúdo. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
@@ -136,7 +144,7 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img='./src/assets/sorteador.jpg'
+         img={sorteadorimg}
          habilidades={['HTML', 'Less', 'JavaScript', 'Grunt']}
          site='Sorteador'
          descricao='Site com a função de sortear um número no intervalo definido pelo usuário, nesse projeto foi possivel consolidar o conhecimento em ferramentas como o Less e o Grunt. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
@@ -146,7 +154,7 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img='./src/assets/todovue.jpg'
+         img={todoimg}
          habilidades={['HTML', 'CSS', 'Vue.js']}
          site='ToDo'
          descricao='Projeto para criar um site que organize minha lista de tarefas, onde posso adicionar tarefas, marcar as completadas e até filtra-las. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
@@ -156,7 +164,7 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img='./src/assets/worldgames.jpg'
+         img={worldimg}
          habilidades={['HTML', 'CSS', 'Bootstrap']}
          site='World Games'
          descricao='Site de uma loja de jogos fictícia, feita com a biblioteca Bootstrap. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'

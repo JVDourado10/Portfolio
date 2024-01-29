@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Github from '../assets/icon-github.svg?react'
 import Linkedin from '../assets/icon-linkedin.svg?react'
+import detailbg from '../assets/detail-bg.svg'
+
 
 const Container = styled.div`
   display: grid;
@@ -35,7 +37,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-image: url('./src/assets/detail-bg.svg');
+    background-image: url(${(props) => props.detailbg});
     position: absolute;
     bottom: 0;
   }
@@ -91,7 +93,7 @@ const Contato = () => {
   return (
     <>
      <Background id="contato">
-          <SectionTitle>CONTATO</SectionTitle>
+          <SectionTitle detailbg={detailbg}>CONTATO</SectionTitle>
         <Container>
           <Mensagem>Estou disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 👋.</Mensagem>
           <ContatoInfos>

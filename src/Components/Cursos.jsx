@@ -4,6 +4,7 @@ import Cardsm from './Cardsm'
 import ebac from '../assets/ebac.svg'
 import origamid from '../assets/origamid.svg'
 import dio from '../assets/dio.png'
+import detailbg from '../assets/detail-bg.svg'
 
 
 
@@ -20,7 +21,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-image: url('./src/assets/detail-bg.svg');
+    background-image: url(${(props) => props.detailbg});
     position: absolute;
     bottom: 0;
   }
@@ -41,7 +42,7 @@ const Container = styled.div`
 const Cursos = () => {
   return (
     <>
-      <SectionTitle id="cursos">CURSOS</SectionTitle>
+      <SectionTitle detailbg={detailbg} id="cursos">CURSOS</SectionTitle>
       <CursosSection>
         <Container>
           <Cardsm
