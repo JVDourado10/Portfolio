@@ -3,7 +3,7 @@ import React from 'react'
 import Card from "./Card"
 import setaLeft from '../assets/arrow-left.svg'
 import setaRight from '../assets/arrow-right.svg'
-import bikcraftimg from '../assets/Bikcraft.jpg'
+import bikcraftimg from '../assets/bikcraft.jpg'
 import animaisFantasticosimg from '../assets/AnimaisFantasticos.jpg'
 import pokedeximg from '../assets/Pokedex.jpg'
 import disneyimg from '../assets/DisneyPlus.jpg'
