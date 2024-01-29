@@ -120,7 +120,7 @@ const Perfil = styled.div`
     content: '';
     height: 278px;
     width: 347px;
-    background: url(${(props) => props.linesm});
+    background: url(${(props) => props.$linesm});
     position: absolute;
     top: 15%;
     right: 15%;
@@ -131,7 +131,7 @@ const Perfil = styled.div`
     content: '';
     height: 457px;
     width: 541px;
-    background: url(${(props) => props.linebg}) no-repeat;
+    background: url(${(props) => props.$linebg}) no-repeat;
     position: absolute;
     top: 0%;
     right: -10%;
@@ -249,7 +249,7 @@ const Hero = () => {
           <Subtitulo detailsm={detailsm}>Sobre</Subtitulo>
           <Descricao><b>Desenvolvedor Front-end</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b> e <b>SASS</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
         </Infos>
-        <Perfil linesm={linesm} linebg={linebg}>
+        <Perfil $linesm={linesm} $linebg={linebg}>
           <Imagem curveIn={curveIn} curveOut={curveOut}>
             <img className="perfil" src={perfil} alt="Perfil" />
           </Imagem>
