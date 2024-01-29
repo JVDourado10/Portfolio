@@ -86,7 +86,7 @@ const Imagem = styled.div`
     content: '';
     height: 353px;
     width: 266px;
-    background: url(${(props) => props.curveIn});
+    background: url(${(props) => props.$curveIn});
     position: absolute;
     transition: .3s;
     top: 0;
@@ -95,7 +95,7 @@ const Imagem = styled.div`
     content: '';
     height: 356px;
     width: 279px;
-    background: url(${(props) => props.curveOut});
+    background: url(${(props) => props.$curveOut});
     position: absolute;
     transition: .3s;
     left: -2px;

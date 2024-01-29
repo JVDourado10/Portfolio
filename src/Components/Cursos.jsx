@@ -21,7 +21,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-image: url(${(props) => props.detailbg});
+    background-image: url(${(props) => props.$detailbg});
     position: absolute;
     bottom: 0;
   }

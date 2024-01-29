@@ -49,7 +49,7 @@ const CardsmStyle = styled.div`
     position: absolute;
     width: 404px;
     height: 249px;
-    background-image: url(${(props) => props.curvein});
+    background-image: url(${(props) => props.$curvein});
     left: -50px;
     top: -40px;
     transform: scale(0.9);
@@ -60,7 +60,7 @@ const CardsmStyle = styled.div`
     position: absolute;
     width: 416px;
     height: 239px;
-    background-image: url(${(props) => props.curveout});
+    background-image: url(${(props) => props.$curveout});
     left: -50px;
     top: -40px;
     transform: scale(0.9);
