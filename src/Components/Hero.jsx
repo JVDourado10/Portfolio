@@ -30,7 +30,7 @@ const Titulo = styled.h1`
   position: relative;
 
   & span {
-    color: #70ba11;
+    color: #5B2B65;
   }
 `
 
@@ -56,7 +56,7 @@ const Subtitulo = styled.h2`
     content: '';
     width: 16px;
     height: 1px;
-    background-color: #70ba11;
+    background-color: #5B2B65;
     position: absolute;
     bottom: 2px;
   }
@@ -106,7 +106,7 @@ const Perfil = styled.div`
 `
 
 const Habilidades = styled.div`
-  background: linear-gradient(#C9EC9C, #A6CD74);
+  background: linear-gradient(#7d3e8a, #5B2B65);
   box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
   display: flex;
   height: 100px;
@@ -134,7 +134,7 @@ const Habilidades = styled.div`
       position: absolute;
       font-family: Roboto;
       text-align: center;
-      color: #254102;
+      color: #e5c7eb;
       font-weight: bold;
       justify-self: center;
       bottom: -25px;
@@ -160,33 +160,39 @@ const Botoes = styled.div`
   & a{
       border-radius: 30px;
       padding: 20px;
-      font-family: Roboto;
+      font-family: Poppins;
       font-size: 24px;
       box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
       display: flex;
       gap: 10px;
+      font-weight: bold;
   }
 
   & .botao1{
-    background: none; 
-    border: 1px solid #70ba11;
-    color: #70ba11;
+    background: #f7ecfa; 
+    border: 1px solid #5B2B65;
+    color: #5B2B65;
+    transition: .3s;
+
 
     &:hover {
-      color: #82c52a;
-    border: 1px solid #82c52a;
+      color: #3c0c46;
+      border: 1px solid #3c0c46;
+      scale: 1.01;
 
     }
   }
 
   & .botao2{
-    background: linear-gradient(#81ce1d,#5b990b); 
-    color: #fff;
+    background: linear-gradient(#7d3e8a, #5B2B65); 
+    color: #f2e2f5;
+    transition: .3s;
 
 
     &:hover {
-      background: linear-gradient(#67aa0f,#4a7e07);
-      color: #fff;
+      background: linear-gradient(#561d61, #631872);
+      color: #f2e2f5;
+      scale: 1.01;
     }
   }
 `
@@ -287,10 +293,10 @@ const Hero = () => {
       <Botoes>
         <a className="botao1" href={curriculo} download target="blank_">
           <img src={download} />
-          Meu Currículo</a>
+          CURRÍCULO</a>
         <a className="botao2" href="https://wa.me/5574998061735" target="blank_">
           <img src={whats} />
-          Entrar em contato</a>
+          CONTATO</a>
       </Botoes>
     </>
   )

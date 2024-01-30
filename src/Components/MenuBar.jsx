@@ -50,7 +50,7 @@ const MenuOptions = styled.nav`
         content: '';
         height: 2px;
         width: 0%;
-        background-color: #70ba11;
+        background-color: #7d3e8a;
         position: absolute;
         bottom: 0px;
         transition: .3s;

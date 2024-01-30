@@ -37,7 +37,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-color: #70ba11;
+    background-color: #7d3e8a;
     position: absolute;
     bottom: 0;
   }
@@ -64,7 +64,7 @@ const Links = styled.nav`
         content: '';
         height: 2px;
         width: 0%;
-        background-color: #70ba11;
+        background-color: #5B2B65;
         position: absolute;
         bottom: 0px;
         transition: .3s;

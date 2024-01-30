@@ -34,7 +34,7 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-color: #70ba11;
+    background-color: #7d3e8a;
     position: absolute;
     bottom: 0;
   }

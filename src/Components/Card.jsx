@@ -103,7 +103,7 @@ const Links = styled.div`
     }
 
     &:hover {
-      color: #70ba11;
+      color: #d7bddb;
     }
   }
 `

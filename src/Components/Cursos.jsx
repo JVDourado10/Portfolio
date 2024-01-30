@@ -21,14 +21,14 @@ const SectionTitle = styled.h1`
     content: '';
     width: 19px;
     height: 4px;
-    background-color: #70ba11;
+    background-color: #5B2B65;
     position: absolute;
     bottom: 0;
   }
 `
 
 const CursosSection = styled.section`
-  
+
 `
 
 const Container = styled.div`
