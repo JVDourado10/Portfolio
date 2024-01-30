@@ -44,37 +44,34 @@ const CardsmStyle = styled.div`
     font-size: 20px;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 404px;
-    height: 249px;
-    background-image: url(${(props) => props.curvein});
-    left: -50px;
-    top: -40px;
-    transform: scale(0.9);
-    transition: .3s;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 416px;
-    height: 239px;
-    background-image: url(${(props) => props.curveout});
-    left: -50px;
-    top: -40px;
-    transform: scale(0.9);
-    transition: .3s;
-  }
-
   &:hover {
-    &::before {
+    & .curvain {
       transform: scale(.92);
     }
-    &::after {
+    & .curvaout {
       transform: scale(.94);
     }
   }
+`
+
+const Curvein = styled.img`
+  position: absolute;
+  width: 404px;
+  height: 249px;
+  left: -50px;
+  top: -40px;
+  transform: scale(0.9);
+  transition: .3s;
+`
+
+const Curveout = styled.img`
+  position: absolute;
+  width: 416px;
+  height: 239px;
+  left: -50px;
+  top: -40px;
+  transform: scale(0.9);
+  transition: .3s;
 `
 
 const Cardsm = ({curso, horas, instituicao, imagem}) => {
@@ -86,6 +83,8 @@ const Cardsm = ({curso, horas, instituicao, imagem}) => {
         <img src={imagem} />
         <p>{instituicao}</p>
       </div>
+      <Curvein className="curvain" src={curvein}/>
+      <Curveout className="curvaout" src={curveout}/>
     </CardsmStyle>
   )
 }

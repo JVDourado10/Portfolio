@@ -56,7 +56,7 @@ const Subtitulo = styled.h2`
     content: '';
     width: 16px;
     height: 1px;
-    background-image: url(${(props) => props.detailsm});
+    background-color: #70ba11;
     position: absolute;
     bottom: 2px;
   }
@@ -76,72 +76,33 @@ const Descricao = styled.p`
 
 const Imagem = styled.div`
   position: relative;
-  &::after {
-    content: '';
-    height: 353px;
-    width: 266px;
-    background: url(${(props) => props.curveIn});
-    position: absolute;
-    transition: .3s;
-    top: 0;
-  }
-  &::before {
-    content: '';
-    height: 356px;
-    width: 279px;
-    background: url(${(props) => props.curveOut});
-    position: absolute;
-    transition: .3s;
-    left: -2px;
-  }
 
   &:hover {
-    &::after {
+    & .curvain {
       scale: 1.1;
     }
-    &::before {
+
+    & .curvaout {
       scale: 1.15;
-    } 
+    }
+
+    & .linhasm {
+      top: 20%;
+      right: -10%;
+    }
+
+    & .linhabg {
+      top: -10%;
+      right: -80%;
+    }
   }
 `
 
-const Perfil = styled.section`
+const Perfil = styled.div`
   margin: 40px 0;
   display: flex;
   justify-content: center;
   position: relative;
-  &::after {
-    content: '';
-    height: 278px;
-    width: 347px;
-    background: url(${(props) => props.linesm});
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    transition: .3s;
-    z-index: -1;
-  }
-  &::before {
-    content: '';
-    height: 457px;
-    width: 541px;
-    background: url(${(props) => props.linebg}) no-repeat;
-    position: absolute;
-    top: 0%;
-    right: -10%;
-    transition: .3s;
-    z-index: -1;
-  }
-  &:hover {
-    &::after {
-      top: 20%;
-      right: 20%;
-    }
-    &::before {
-      top: -5%;
-      right: -15%;
-    }   
-  } 
 `
 
 const Habilidades = styled.div`
@@ -230,6 +191,35 @@ const Botoes = styled.div`
   }
 `
 
+const Linesm = styled.img`
+  position: absolute;
+  top: 15%;
+  right: -20%;
+  transition: .3s;
+  z-index: -1;
+`
+const Linebg = styled.img`
+  position: absolute;
+  top: 0%;
+  right: -70%;
+  transition: .3s;
+  z-index: -1;
+`
+const CurveIn = styled.img`
+  top: 0;
+  height: 353px;
+  width: 266px;
+  position: absolute;
+  transition: .3s;
+`
+const CurveOut = styled.img`
+  top: 0;
+  height: 356px;
+  width: 279px;
+  position: absolute;
+  transition: .3s;
+
+`
 
 const Hero = () => {
   return (
@@ -244,8 +234,12 @@ const Hero = () => {
           <Descricao><b>Desenvolvedor Front-end</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b> e <b>SASS</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
         </Infos>
         <Perfil linesm={linesm} linebg={linebg}>
-          <Imagem curveIn={curveIn} curveOut={curveOut}>
+          <Imagem>
             <img className="perfil" src={perfil} alt="Perfil" />
+            <Linesm className="linhasm" src={linesm} />
+            <Linebg className="linhabg" src={linebg} />
+            <CurveIn className="curvain" src={curveIn} />
+            <CurveOut className="curvaout" src={curveOut} />
           </Imagem>
         </Perfil>
       </Container>
