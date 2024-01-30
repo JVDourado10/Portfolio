@@ -14,15 +14,9 @@ import download from '../assets/download.svg'
 import curveIn from '../assets/curve-in.svg'
 import curveOut from '../assets/curve-out.svg'
 import detailsm from '../assets/detail-sm.svg'
-// import detailbg from '../assets/detail-bg.svg'
 import curriculo from '../../curriculo.pdf'
 import linesm from '../assets/line-sm.svg'
 import linebg from '../assets/line-bg.svg'
-
-
-
-
-
 
 
 const Titulo = styled.h1`
@@ -62,7 +56,7 @@ const Subtitulo = styled.h2`
     content: '';
     width: 16px;
     height: 1px;
-    background-image: url('./src/assets/detail-sm.svg');
+    background-image: url(${(props) => props.detailsm});
     position: absolute;
     bottom: 2px;
   }
@@ -86,7 +80,7 @@ const Imagem = styled.div`
     content: '';
     height: 353px;
     width: 266px;
-    background: url(${(props) => props.$curveIn});
+    background: url(${(props) => props.curveIn});
     position: absolute;
     transition: .3s;
     top: 0;
@@ -95,7 +89,7 @@ const Imagem = styled.div`
     content: '';
     height: 356px;
     width: 279px;
-    background: url(${(props) => props.$curveOut});
+    background: url(${(props) => props.curveOut});
     position: absolute;
     transition: .3s;
     left: -2px;
@@ -111,7 +105,7 @@ const Imagem = styled.div`
   }
 `
 
-const Perfil = styled.div`
+const Perfil = styled.section`
   margin: 40px 0;
   display: flex;
   justify-content: center;
@@ -120,7 +114,7 @@ const Perfil = styled.div`
     content: '';
     height: 278px;
     width: 347px;
-    background: url(${(props) => props.$linesm});
+    background: url(${(props) => props.linesm});
     position: absolute;
     top: 15%;
     right: 15%;
@@ -131,7 +125,7 @@ const Perfil = styled.div`
     content: '';
     height: 457px;
     width: 541px;
-    background: url(${(props) => props.$linebg}) no-repeat;
+    background: url(${(props) => props.linebg}) no-repeat;
     position: absolute;
     top: 0%;
     right: -10%;
@@ -249,7 +243,7 @@ const Hero = () => {
           <Subtitulo detailsm={detailsm}>Sobre</Subtitulo>
           <Descricao><b>Desenvolvedor Front-end</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b> e <b>SASS</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
         </Infos>
-        <Perfil $linesm={linesm} $linebg={linebg}>
+        <Perfil linesm={linesm} linebg={linebg}>
           <Imagem curveIn={curveIn} curveOut={curveOut}>
             <img className="perfil" src={perfil} alt="Perfil" />
           </Imagem>
