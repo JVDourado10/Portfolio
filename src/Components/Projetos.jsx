@@ -5,11 +5,12 @@ import setaLeft from '../assets/arrow-left.svg'
 import setaRight from '../assets/arrow-right.svg'
 import bikcraftimg from '../assets/bikcraft.jpg'
 import animaisFantasticosimg from '../assets/AnimaisFantasticos.jpg'
-import pokedeximg from '../assets/Pokedex.jpg'
+import efoodimg from '../assets/efood.jpg'
 import disneyimg from '../assets/DisneyPlus.jpg'
-import sorteadorimg from '../assets/sorteador.jpg'
-import todoimg from '../assets/todovue.jpg'
+import mulhollanddrimg from '../assets/mulhollanddr.jpg'
+import liverpoolimg from '../assets/liverpool.jpg'
 import worldimg from '../assets/worldgames.jpg'
+import buffetimg from '../assets/buffet.jpg'
 import detailbg from '../assets/detail-bg.svg'
 
 
@@ -77,7 +78,7 @@ const Projetos = () => {
   const [aumentou, setAumentou] = React.useState(true)
 
   const [cardPosicao, setCardPosicao] = React.useState(1)
-  const cards = 7;
+  const cards = 8;
   
   React.useEffect(() => {
     if(aumentou) {
@@ -124,12 +125,12 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img={pokedeximg}
-         habilidades={['HTML', 'CSS', 'JavaScript']}
-         site='Pokedex'
-         descricao='Projeto de uma Pokedex, com informações sobre os todos os pokemons fornecidos pela API. Realizado no Bootcamp FullStack Java da Santander Coders.'
-         vercelLink='https://js-developer-pokedex-ivory.vercel.app/'
-         githubLink='https://github.com/JVDourado10/js-developer-pokedex'
+         img={efoodimg}
+         habilidades={['React', 'Redux', 'Styled Components']}
+         site='Efood'
+         descricao='Projeto final do curso de Front End da EBAC, efood simula um site de delivery de diversos restaurantes diferentes.'
+         vercelLink='https://efood-six-nu.vercel.app/'
+         githubLink='https://github.com/JVDourado10/efood'
          posicao={posicao}
         >
         </Card>
@@ -144,25 +145,27 @@ const Projetos = () => {
         >
         </Card>
         <Card
-         img={sorteadorimg}
-         habilidades={['HTML', 'Less', 'JavaScript', 'Grunt']}
-         site='Sorteador'
-         descricao='Site com a função de sortear um número no intervalo definido pelo usuário, nesse projeto foi possivel consolidar o conhecimento em ferramentas como o Less e o Grunt. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
+         img={mulhollanddrimg}
+         habilidades={['HTML', 'SASS', 'JavaScript']}
+         site='Mulholland Dr'
+         descricao='Site sobre o filme Mulholland Dr, feito com a biblioteca SASS. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
          vercelLink='https://sorteador-grunt-gold.vercel.app/'
          githubLink='https://github.com/JVDourado10/sorteador_grunt'
          posicao={posicao}
         >
         </Card>
+        
         <Card
-         img={todoimg}
-         habilidades={['HTML', 'CSS', 'Vue.js']}
-         site='ToDo'
-         descricao='Projeto para criar um site que organize minha lista de tarefas, onde posso adicionar tarefas, marcar as completadas e até filtra-las. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
-         vercelLink='https://todo-vue-lyart.vercel.app/'
-         githubLink='https://github.com/JVDourado10/todo-vue'
+         img={buffetimg}
+         habilidades={['HTML', 'CSS', 'Bootstrap']}
+         site='Buffet DyBraga'
+         descricao='Site sobre um Buffet fictício, feito com a biblioteca Bootstrap. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
+         vercelLink='https://sorteador-grunt-gold.vercel.app/'
+         githubLink='https://github.com/JVDourado10/sorteador_grunt'
          posicao={posicao}
         >
         </Card>
+
         <Card
          img={worldimg}
          habilidades={['HTML', 'CSS', 'Bootstrap']}
@@ -170,6 +173,16 @@ const Projetos = () => {
          descricao='Site de uma loja de jogos fictícia, feita com a biblioteca Bootstrap. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
          vercelLink='https://world-games-mu.vercel.app/'
          githubLink='https://github.com/JVDourado10/world_games'
+         posicao={posicao}
+        >
+        </Card>
+        <Card
+         img={liverpoolimg}
+         habilidades={['HTML', 'CSS']}
+         site='Liverpool Fan Website'
+         descricao='Site sobre o time de futebol Liverpool, feito com HTML e CSS. Realizado juntamente ao curso de Desenvolvedor FullStack Python da EBAC'
+         vercelLink='https://sorteador-grunt-gold.vercel.app/'
+         githubLink='https://github.com/JVDourado10/sorteador_grunt'
          posicao={posicao}
         >
         </Card>
