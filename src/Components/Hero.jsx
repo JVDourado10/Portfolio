@@ -68,10 +68,6 @@ const Descricao = styled.p`
   font-size: 24px;
   margin-bottom: 2px;
   max-width: 34ch;
-  & span {
-    color: #5b5b5b;
-  }
-  
 `
 
 const Imagem = styled.div`
@@ -230,14 +226,14 @@ const CurveOut = styled.img`
 const Hero = () => {
   return (
     <>
-      <Titulo>DESENVOLVEDOR <span>FRONT</span>END</Titulo>
+      <Titulo>DESENVOLVEDOR <span>FULL</span>STACK</Titulo>
       <Container>
         <Infos>
           <Subtitulo detailsm={detailsm}>Curso</Subtitulo>
           <Descricao>Análise e Desenvolvimento de Sistemas</Descricao>
-          <Descricao><span>UNICESUMAR - 1º semestre</span></Descricao>
+          <Descricao><span><b>UFPR</b> - 1º semestre</span></Descricao>
           <Subtitulo detailsm={detailsm}>Sobre</Subtitulo>
-          <Descricao><b>Desenvolvedor Front-end</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b> e <b>SASS</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
+          <Descricao><b>Desenvolvedor Full Stack</b> com experiência em <b>React</b>, <b>JavaScript</b> , <b>TypeScript</b>, <b>Styled Components</b>, <b>ferramentas de automação npm</b>, <b>SASS</b> e <b>Python</b>. Apaixonado pela programação e pela possibilidade de sempre criar algo diferente. Atualmente cursando <b>Análise e Desenvolvimento de Sistemas</b> e me especializando na área de <b>Desenvolvimento Full Stack</b> através do curso da EBAC.</Descricao>
         </Infos>
         <Perfil linesm={linesm} linebg={linebg}>
           <Imagem>
